@@ -17,9 +17,12 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  list-style: none;
+  text-decoration: none;
 }
 body {
   font-family: "Work Sans", sans-serif;
+  
 }
 /* .container{
     padding-left: 15px;
@@ -109,6 +112,21 @@ Small devices (landscape phones, 576px and up) */
   transition-delay: 0.5s;
 }
 /* End Global Variables */
+/*Start Header */
+header{
+  background-color: black;
+  color: white !important;
+}
+.navbar-toggler{
+  background-color: white !important;
+}
+.navbar-brand{
+  color: white !important;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color: rgb(244 244 244) !important;
+}
+/*End Header */
 /* Start Counter App */
 .counter-project {
   position: relative;
@@ -739,6 +757,158 @@ Small devices (landscape phones, 576px and up) */
   color: hsla(0, 0%, 0%, 0.75);
 }
 /* End Of Weathe App */
+/* Start Footer */
+.footer{
+  background-color: #191919;
+  padding: 70px 0 0;
+  color: white;
+}
+.footer .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  gap: 300px;
+}
+@media (max-width:976px) {
+  .footer .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 40px;
+  }
+}
+@media (max-width:776px) {
+  .footer .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 40px;
+  }
+}
+.footer #jonyinfo{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .container .box h3{
+  font-size: 50px;
+  margin: 0 0 20px;
+  color: white;
+}
+.footer .container .box .social{
+  display: flex;
+}
+.footer .container .box .social li{
+  margin-right: 10px;
+}
+.footer .container .box .social li a{
+  background-color: #313131;
+  color: #b9b9b9;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  transition: var(--main-transition);
+  text-decoration: none;
+}
+.footer .container .box .social .faceebook:hover{
+  background-color: #1877f2;
+  color: white;
+  font-size: 33px;
+}
+.footer .container .box .social .Github:hover{
+  background-color: white;
+  color: black;
+  font-size: 33px;
+}
+.footer .container .box .social .Linkedin:hover{
+  background-color: #0a66c2;
+  font-size: 33px;
+  color: white;
+}
+.footer .container .box .social .Gmail img{
+  width: 33px;
+  position: relative;
+  transition: var(--main-transition);
+}
+.footer .container .box .social .Gmail{
+  position: relative;
+  transition: var(--main-transition);
+}
+.footer .container .box .social .Gmail::after{
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #313131b8;
+  transition: var(--main-transition);
+}
+.footer .container .box .social .Gmail:hover::after{
+  top: 50%;
+  right: 50%;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transition: var(--main-transition);
+}
+.footer .container .box .social .Gmail:hover img{
+  width: 36px;
+}
+.footer .container .box p{
+  margin: 10px 0;
+  line-height: 2;
+  color: #b9b9b9;
+}
+.footer .container .box .links li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: var(--main-transition);    
+}
+.footer .container .box .links li:not(:last-child){
+  border-bottom: 1px solid #444;
+}
+.footer .container .box .links a{
+  color: #b9b9b9;
+}
+.footer .container .box .links a::before{
+  font-family: "Font Awesome 5 Free";
+  content: "\F101";
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--main-color);
+}
+.footer .container .box .links li:hover a{
+  color: white;
+}
+.footer .container .box .links li:hover{
+  padding-left: 20px;
+}
+.footer .footer-gallery img{
+  width: 78px;
+  border: 3px solid white;
+  margin: 2px;
+}
+.footer .copyright{
+  padding: 25px 0;
+  text-align: center;
+  color: white;
+  margin: 50px 0 0;
+  border-top: 1px solid #444;
+}
+.footer .box .line{
+  display: flex;
+  align-items: center;
+  color: #b9b9b9;
+  margin-bottom: 30px;
+}
+.footer .box .line i{
+  color: var(--main-color);
+  font-size: 25px;
+  margin-right: 10px;
+}
+/* End Footer */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
