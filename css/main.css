@@ -1,0 +1,512 @@
+/* Start Variables */
+:root {
+  --primary-color: #ffca28;
+  --primary-color-opacity: #0a362259;
+  --secondary-color: #664d03;
+  --secondary-color-opacity: #664d0362;
+  --main-transition: 0.3s;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  --section-background: #ececec;
+}
+/* End Variables */
+/* Start Global Variables */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+/* .container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap
+
+Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    width: 550px;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 950px;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1150px;
+  }
+}
+.main-title {
+  text-transform: uppercase;
+  margin: 0px auto 80px;
+  border: 2px solid black;
+  padding: 5px 35px;
+  font-size: 20px;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  transition: var(--main-transition);
+}
+.main-title::after {
+  content: "";
+  position: absolute;
+  right: -30%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+.main-title::before {
+  content: "";
+  position: absolute;
+  left: -30%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+@media (max-width: 576px) {
+  .main-title::after {
+    right: -12%;
+  }
+  .main-title::before {
+    left: -12%;
+  }
+}
+.main-title:hover::before {
+  z-index: -1;
+  animation: left-move 0.5s linear forwards;
+}
+.main-title:hover::after {
+  z-index: -1;
+  animation: right-move 0.5s linear forwards;
+}
+.main-title:hover {
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.5s;
+}
+/* End Global Variables */
+/* Start Counter App */
+.counter-project {
+  position: relative;
+  z-index: 100;
+  padding-top: var(--main-padding-top);
+  position: relative;
+  /* background-color: var(--section-background); */
+}
+.counter-project .counter-project-content {
+  background-image: url(/images/CounterBackGround.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.counter-project .counter-project-content .container {
+  position: relative;
+}
+.counter-project .counter-project-content .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+}
+.counter-project-content .container .count {
+  font-size: 169px;
+  font-weight: bold;
+  position: absolute;
+  top: -155px;
+}
+.counter-project-content .container .controllers {
+  position: absolute;
+  top: 150px;
+}
+.counter-project-content .container .controllers button {
+  margin: 0 45px;
+  position: relative;
+  font-size: 22px;
+  width: 120px;
+  height: 110px;
+  border-radius: 50%;
+  font-weight: bold;
+  text-align: center;
+  transition: var(--main-transition);
+}
+.counter-project-content .container .controllers button::before {
+  position: absolute;
+  content: "";
+  border-style: solid;
+  border-width: 0 30px 125px 30px;
+  border-radius: 15px;
+  width: 0;
+  height: 0;
+  border-color: transparent transparent #0d6efd transparent;
+  right: 30px;
+  top: 75px;
+  transition: var(--main-transition);
+}
+.counter-project-content .container .controllers button:hover::before {
+  border-color: transparent transparent #0b5ed7 transparent;
+}
+.counter-project-content .container .controllers .btn-warning::before {
+  border-color: transparent transparent #ffc107 transparent;
+}
+.counter-project-content .container .controllers .btn-warning:hover::before {
+  border-color: transparent transparent #ffca2c transparent;
+}
+@media (max-width: 768px) {
+  .counter-project-content .container .controllers button {
+    margin: 0 17px;
+    position: relative;
+    font-size: 15px;
+    width: 86px;
+    height: 76px;
+    border-radius: 50%;
+    font-weight: bold;
+    text-align: center;
+    transition: var(--main-transition);
+  }
+  .counter-project-content .container .controllers button::before {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 0 20px 90px 20px;
+    border-radius: 15px;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent #0d6efd transparent;
+    top: 40px;
+    right: 50%;
+    transition: var(--main-transition);
+    transform: translateX(50%);
+  }
+}
+/* End Counter App */
+/* Start Guessing App */
+.guess-project {
+  position: relative;
+  z-index: 100;
+  padding-top: var(--main-padding-top);
+  position: relative;
+  background-color: var(--section-background);
+}
+.guess-project .guess-project-content {
+  background-image: url(/images/GuessApp.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+}
+.guess-project .guess-project-content::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.292);
+  z-index: 0;
+}
+.guess-project .guess-project-content .content {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  align-items: center;
+}
+.guess-project .guess-project-content .content h1 {
+  margin-bottom: 50px;
+  color: var(--primary-color);
+}
+.guess-project .guess-project-content .content form {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.guess-project .guess-project-content .content form input {
+  border: none;
+  border-radius: 15px;
+  margin: 0px 15px 0px 15px;
+}
+.guess-project .guess-project-content .content form button {
+  font-weight: bold;
+}
+@media (max-width: 776px) {
+  .guess-project .guess-project-content .content form {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  .guess-project .guess-project-content .content form input {
+    margin: 15px 0px 15px 0px;
+  }
+}
+/* End Guessing App */
+/* Start Of Temprature Convirsion App */
+.tempr-project {
+  position: relative;
+  z-index: 100;
+  padding-top: var(--main-padding-top);
+}
+.tempr-project-content {
+  background-image: url(/images/tempconv.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.tempr-project-content::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.543);
+  z-index: 0;
+}
+.tempr-project-content .content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 10;
+  width: 282px;
+  height: 330px;
+  text-align: center;
+  background-color: #ffffff75;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 16px;
+}
+.tempr-project-content .content h4 {
+  color: #0a58ca;
+  font-weight: bold;
+}
+.tempr-project-content .content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.tempr-project-content .content form input[type="number"] {
+  border-radius: 15px;
+  border: none;
+  margin-bottom: 15px;
+  width: 120px;
+  height: 35px;
+  text-align: center;
+}
+.tempr-project-content .content form div {
+  margin-bottom: 15px;
+}
+.tempr-project-content .content p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 22px;
+}
+/* End Of Temprature Convirsion App */
+/* Start Of Clock App */
+.clock-project {
+  position: relative;
+  z-index: 100;
+  padding-top: var(--main-padding-top);
+  background-color: var(--section-background);
+}
+.clock-project-content {
+  background-image: url(/images/Time\ App\ .jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.clock-project-content::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.543);
+  z-index: 0;
+}
+.digital-clock {
+  position: absolute;
+  font-family: monospace;
+  font-size: 6.5rem;
+  font-weight: bold;
+  z-index: 10;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, -5%);
+  color: white;
+  background: linear-gradient(to right, black, #4d4855) !important;
+  width: 500px;
+  border-radius: 20px;
+  text-align: center;
+}
+@media (max-width: 776px) {
+  .digital-clock {
+    position: absolute;
+    font-family: monospace;
+    font-size: 3.5rem;
+    font-weight: bold;
+    z-index: 10;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -5%);
+    color: white;
+    background: linear-gradient(to right, black, #4d4855) !important;
+    width: 250px;
+    border-radius: 20px;
+    text-align: center;
+  }
+}
+.stop-watch {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stop-watch .controller {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: monospace;
+  border: 5px solid darkseagreen;
+  border-radius: 16px;
+  width: 400px
+}
+.stop-watch .controller div button{
+  font-weight: bold;
+  padding: 10px 18px;
+  font-size: 18px;
+}
+@media (max-width: 776px) {
+  .stop-watch .controller {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    border: 5px solid darkseagreen;
+    border-radius: 16px;
+    width: 300px
+  }
+  .stop-watch .controller div button{
+    font-weight: bold;
+    padding: 5px 9px;
+    font-size: 15px;
+  }
+}
+/* End Of Clock App */
+/* Start Animation */
+@keyframes up-and-down {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
+}
+@keyframes bouncing {
+  0%,
+  10%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40%,
+  60% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes left-move {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+@keyframes right-move {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+@keyframes moving-arrow {
+  100% {
+    transform: translateX(10px);
+  }
+}
+@keyframes flashing {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
+/* End Animation */
