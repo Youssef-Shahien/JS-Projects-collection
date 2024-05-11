@@ -417,9 +417,9 @@ Small devices (landscape phones, 576px and up) */
   font-family: monospace;
   border: 5px solid darkseagreen;
   border-radius: 16px;
-  width: 400px
+  width: 400px;
 }
-.stop-watch .controller div button{
+.stop-watch .controller div button {
   font-weight: bold;
   padding: 10px 18px;
   font-size: 18px;
@@ -434,15 +434,311 @@ Small devices (landscape phones, 576px and up) */
     font-family: monospace;
     border: 5px solid darkseagreen;
     border-radius: 16px;
-    width: 300px
+    width: 300px;
   }
-  .stop-watch .controller div button{
+  .stop-watch .controller div button {
     font-weight: bold;
     padding: 5px 9px;
     font-size: 15px;
   }
 }
 /* End Of Clock App */
+/* Start Of Calculator App */
+.calculator-project {
+  position: relative;
+  z-index: 100;
+  padding-top: var(--main-padding-top);
+}
+.calculator-project-content {
+  background-image: url(/images/CalcApp.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.calculator-project-content::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.543);
+  z-index: 0;
+}
+.calculator-project-content .content {
+  font-family: arial;
+  position: absolute;
+  z-index: 10;
+  background-color: hsl(180deg 1% 15% / 30%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  max-width: 500px;
+  overflow: hidden;
+}
+.calculator-project-content .content input {
+  width: 100%;
+  padding: 10px;
+  font-size: 4rem;
+  text-align: left;
+  border: none;
+  color: white;
+  background-color: hsl(180deg 1% 20% / 30%);
+}
+.calculator-project-content .content #keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 25px;
+}
+.calculator-project-content .content #keys button {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: hsl(0, 0%, 30%);
+  text-align: center;
+}
+.calculator-project-content .content #keys button:hover {
+  background-color: hsl(180, 1%, 40%);
+}
+.calculator-project-content .content #keys button:active {
+  background-color: hsl(180, 1%, 50%);
+}
+.calculator-project-content .content #keys .operator-btn {
+  background-color: hsl(35, 100%, 50%);
+}
+.calculator-project-content .content #keys .operator-btn:hover {
+  background-color: hsl(35, 100%, 60%);
+}
+.calculator-project-content .content #keys .operator-btn:active {
+  background-color: hsl(35, 100%, 60%);
+}
+
+@media (max-width: 776px) {
+  .calculator-project-content .content #keys button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: hsl(0, 0%, 30%);
+    text-align: center;
+  }
+}
+/* End Of Calculator App */
+/* Start Of RockPaperScissors App */
+.RockPaperScissors-project {
+  position: relative;
+  z-index: 100;
+  padding-top: var(--main-padding-top);
+  background-color: var(--section-background);
+}
+.RockPaperScissors-project-content {
+  background-image: url(/images/RockPaperScissors.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.RockPaperScissors-project-content::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.231);
+  z-index: 0;
+}
+.RockPaperScissors-project-content .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  margin: 0;
+}
+.RockPaperScissors-project-content .content h1 {
+  color: #ffc83d;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.RockPaperScissors-project-content .content .choice {
+  margin-bottom: 30px;
+}
+.RockPaperScissors-project-content .content .choice button {
+  font-size: 6.5rem;
+  min-width: 140px;
+  margin: 0 7px;
+  border-radius: 250px;
+  background-color: hsl(200, 100%, 50%);
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  border: none;
+}
+.RockPaperScissors-project-content .content .choice button:hover {
+  background-color: hsl(200, 100%, 70%);
+}
+#playDisplay,
+#computerDisplay {
+  color: #6ccff0;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+#resultDisplay {
+  color: #198754;
+  font-size: 5rem;
+  margin: 30px 0;
+}
+@media (max-width: 776px) {
+  .RockPaperScissors-project-content .content h1 {
+    color: #ffc83d;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  .RockPaperScissors-project-content .content .choice button {
+    font-size: 2rem;
+    min-width: 50px;
+    margin: 0px 3px;
+    border-radius: 250px;
+    background-color: rgb(0, 170, 255);
+    cursor: pointer;
+    transition: background-color 0.5s ease 0s;
+    border: none;
+  }
+  #playDisplay,
+  #computerDisplay {
+    color: #6ccff0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    min-width: 250px;
+  }
+  #resultDisplay {
+    color: #198754;
+    font-size: 2rem;
+    margin: 30px 0;
+    font-weight: bold;
+  }
+}
+/* End Of RockPaperScissors App */
+/* Start Of Weathe App */
+.Weather-project {
+  position: relative;
+  z-index: 100;
+  padding-top: var(--main-padding-top);
+  /* background-color: var(--section-background); */
+}
+.Weather-project-content {
+  background-image: url(/images/weatherApp1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.Weather-project-content .content {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Weather-project-content .content .weatherForm input {
+  padding: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 2px solid hsla(0, 0%, 20%, 0.3);
+  border-radius: 10px;
+  margin: 10px;
+  width: 250px;
+}
+@media (max-width: 776px) {
+  .Weather-project-content .content .weatherForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.Weather-project-content .content .weatherForm button[type="submit"] {
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: hsl(122, 39%, 50%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Weather-project-content .content .weatherForm button[type="submit"]:hover {
+  background-color: hsl(122, 39%, 40%);
+}
+.Weather-project-content .content .card {
+  background: linear-gradient(180deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%));
+  padding: 50px;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.662);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+.Weather-project-content .content .card h1 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+.Weather-project-content .content .card p {
+  /* font-size: 1.5rem;
+  margin: 5px 0; */
+}
+.cityDisplay,
+.tempDisplay {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: hsla(0, 0%, 0%, 0.75);
+  margin-bottom: 25px;
+}
+.humidityDisplay {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.descDisplay {
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.weatherEmoji {
+  margin: 0px;
+  font-size: 5.5rem;
+}
+.errorDisplay {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: hsla(0, 0%, 0%, 0.75);
+}
+/* End Of Weathe App */
 /* Start Animation */
 @keyframes up-and-down {
   0%,

@@ -49,7 +49,7 @@
             <div class="navbar-nav ms-auto fw-bold">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
               <a class="nav-link" href="#counter-project">Counter App</a>
-              <a class="nav-link" href="#weather-project">Weather App</a>
+              <a class="nav-link" href="#Weather">Weather App</a>
             </div>
           </div>
         </div>
@@ -238,6 +238,86 @@
       </div>
     </div>
     <!-- End Of Clock App -->
+    <!-- Start Of Calculator App -->
+    <div class="calculator-project" id="calculator-project">
+      <div class="main-title"><h2>Calculator</h2></div>
+      <div class="calculator-project-content">
+        <div class="content">
+          <input id="calc-display" readonly />
+          <div id="keys">
+            <button onclick="appendToDisplay('+')" class="operator-btn">
+              +
+            </button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('-')" class="operator-btn">
+              -
+            </button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('*')" class="operator-btn">
+              *
+            </button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('/')" class="operator-btn">
+              /
+            </button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="clearDisplay()" class="operator-btn">C</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Of Calculator App -->
+    <!-- Start Of RockPaperScissors App -->
+    <div class="RockPaperScissors-project" id="RockPaperScissors-project">
+      <div class="main-title"><h2>Roc×Pap×Scis</h2></div>
+      <div class="RockPaperScissors-project-content">
+        <div class="content">
+          <h1>Rock - Paper - Scissors</h1>
+          <div class="choice">
+            <button onclick="playGame('rock')">👊</button>
+            <button onclick="playGame('paper')">✋</button>
+            <button onclick="playGame('scissors')">✌️</button>
+          </div>
+          <div id="playDisplay">Player:</div>
+          <div id="computerDisplay">Computer:</div>
+          <div id="resultDisplay">IT'S A TIE!</div>
+        </div>
+      </div>
+    </div>
+    <!-- End Of RockPaperScissors App -->
+    <!-- Start Weather App -->
+    <div class="Weather-project" id="Weather">
+      <div class="main-title"><h2>Weather</h2></div>
+      <div class="Weather-project-content">
+        <div class="content">
+          <form class="weatherForm">
+            <input
+              type="text"
+              placeholder="Enter Your City"
+              class="cityInput"
+            />
+            <button type="submit">Get Weather</button>
+          </form>
+          <div class="card" style="display: none">
+            <h1 class="cityDisplay">Miami</h1>
+            <p class="tempDisplay">90°F</p>
+            <p class="humidityDisplay">Humiditi: 75%</p>
+            <p class="descDisplay">Clear Skies</p>
+            <p class="weatherEmoji">☀️</p>
+            <p class="errorDisplay">Pleas Enter City</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Weather App -->
 
     <!-- End of Prjoect -->
     <!-- Main JS File -->
